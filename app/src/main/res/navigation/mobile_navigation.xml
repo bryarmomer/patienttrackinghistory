@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_patients_list">
+
+    <fragment
+        android:id="@+id/nav_patients_list"
+        android:name="com.ourapp.patienttracker.ui.patients_list.PatientsListFragment"
+        android:label="@string/menu_patients_list"
+        tools:layout="@layout/fragment_patients_list" />
+
+    <fragment
+        android:id="@+id/nav_cured_patients"
+        android:name="com.ourapp.patienttracker.ui.cured_patients.CuredPatientsFragment"
+        android:label="@string/menu_cured_patients"
+        tools:layout="@layout/fragment_cured_patients" />
+
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.ourapp.patienttracker.ui.feedback.FeedbackFragment"
+        android:label="@string/menu_feedback"
+        tools:layout="@layout/fragment_feedback" />
+</navigation>

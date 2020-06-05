@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/babyBlue"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:alpha="0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            android:hint="@string/password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/remember_me"/-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                app:icon="@drawable/ic_signup_24dp"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:id="@+id/signupBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="@string/signup"
+                android:layout_marginEnd="8dp"
+                />
+
+            <Button
+                android:layout_gravity="end"
+                app:icon="@drawable/ic_login_24dp"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:id="@+id/loginBtn"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/forgotPasswordBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/forgot_password"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/darkBlue"/>
+            
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/loading_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.8"
+        android:gravity="center">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorName="BallSpinFadeLoaderIndicator"
+            style="@style/AVLoadingIndicatorView.Large"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hospital_name"
+        android:text="@string/hospital_name"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textColor="@color/darkBlue"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"/>
+
+</RelativeLayout>

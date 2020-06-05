@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_patients_list"
+            android:icon="@drawable/patienticon"
+            android:title="@string/menu_patients_list" />
+        <item
+            android:id="@+id/nav_cured_patients"
+            android:icon="@drawable/patientcured"
+            android:title="@string/menu_cured_patients" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/review"
+            android:title="@string/menu_feedback" />
+    </group>
+
+</menu>
